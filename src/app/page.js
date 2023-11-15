@@ -1,8 +1,8 @@
-import About from "@/components/About"
-import { Intro } from "@/components/Intro"
-import SectionDivider from "@/components/section-divider"
-import Projects from "@/components/projects"
-import Skills from "@/components/Skills"
+import About from "../components/About.jsx"
+import { Intro } from "../components/Intro.jsx"
+import SectionDivider from "../components/section-divider"
+import Projects from "../components/Projects.jsx"
+import Skills from "../components/Skills.jsx"
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
