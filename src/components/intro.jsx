@@ -8,10 +8,16 @@ import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
 import { linkGitHub, linkLinkedin } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 
 export const Intro = () => {
+  const { ref } = useSectionInView("Inicio", 0.5);
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      ref={ref}
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28"
+      id="inicio"
+    >
       <div className="flex items-center justify-center">
         <div className=" relative">
           <motion.div
@@ -51,16 +57,33 @@ export const Intro = () => {
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
         >
-          Contácteme <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
+          Contácteme{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <Link className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Héctor-Gómez.pdf" target="_blank" rel="noopener noreferrer">
-          Descargar CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
+        <Link
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          href="/Héctor-Gómez.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Descargar CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </Link>
-        <Link className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href={linkLinkedin} target="_blank" rel="noopener noreferrer">
-          <BsLinkedin className="opacity-80 group-hover:opacity-100"/>
+        <Link
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          href={linkLinkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <BsLinkedin className="opacity-80 group-hover:opacity-100" />
         </Link>
-        <Link className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href={linkGitHub} target="_blank" rel="noopener noreferrer">
-          <BsGithub className="opacity-80 group-hover:opacity-100"/>
+        <Link
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          href={linkGitHub}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <BsGithub className="opacity-80 group-hover:opacity-100" />
         </Link>
       </motion.div>
     </section>

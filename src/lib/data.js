@@ -11,28 +11,28 @@ export const linkLinkedin =
   "https://www.linkedin.com/in/h%C3%A9ctor-g%C3%B3mez-0a1075287/";
 export const links = [
   {
-    name: "Home",
-    hash: "#home",
+    name: "Inicio",
+    hash: "#inicio",
   },
   {
-    name: "About",
-    hash: "#about",
+    name: "Sobre mí",
+    hash: "#sobreMi",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Projectos",
+    hash: "#projectos",
   },
   {
-    name: "Skills",
-    hash: "#skills",
+    name: "Habilidades",
+    hash: "#habilidades",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Experiencia",
+    hash: "#experiencia",
   },
   {
-    name: "Contact",
-    hash: "#contact",
+    name: "Contacto",
+    hash: "#contacto",
   },
 ];
 
