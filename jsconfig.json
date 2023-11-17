@@ -3,10 +3,12 @@
     "baseUrl": "src/",
     "paths": {
       "@/*": ["/*"],
-      "@/components/*": ["components/*"]
+      "@/context/*": ["context/*"],
+      "@/email/*": ["email/*"],
+      "@/lib/*": ["lib/*"],
+      "@/components/*": ["components/*"],
     }
   }
 }
 
 
-// "@/*": ["./src/*"],

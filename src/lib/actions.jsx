@@ -1,14 +1,12 @@
 "use server";
 
-// import { EmailTemplate } from "../../../components/EmailTemplate";
-import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { ValidateString } from "./utils";
-import ContactFormEmail from "@/email/contactFormEmail";
+import { ValidateString } from "@/lib/utils";
+import ContactFormEmail from "@/email/ContactFormEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(formDate) {
+export default async function sendEmail(formDate) {
   const email = formDate.get("email");
   const message = formDate.get("message");
   if (!ValidateString(email)) {
