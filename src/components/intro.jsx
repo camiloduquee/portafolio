@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import ImgAvatar from "../../public/Avatar.png";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -30,7 +29,7 @@ export default function Intro() {
             transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
-              src={ImgAvatar}
+              src="/Avatar.png"
               alt="Héctor Gómez"
               width="192"
               height="192"
