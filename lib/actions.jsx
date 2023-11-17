@@ -22,7 +22,8 @@ export default async function sendEmail(formDate) {
       to: "hectorg.devp@gmail.com",
       subject: "Desarrollo - Form",
       reply_to: email,
-      react: <ContactFormEmail email={email} message={message} />,
+      text: message
+      // react: <ContactFormEmail email={email} message={message} />,
     });
   } catch (error) {
       return {
