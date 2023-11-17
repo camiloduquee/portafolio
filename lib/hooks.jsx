@@ -12,6 +12,6 @@ export function useSectionInView(tags, threshold) {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(tags);
     }
-  }, [inView, timeOfLastClick]);
+  }, [inView, timeOfLastClick, setActiveSection, tags]);
   return { ref };
 }
