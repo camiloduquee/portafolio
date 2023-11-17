@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
-import { linkGitHub, linkLinkedin } from "lib/data";
-import { useSectionInView } from "lib/hooks";
+import { linkGitHub, linkLinkedin } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 
