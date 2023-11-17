@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "lib/hooks";
 import sendEmail from "lib/actions";
 import  toast  from "react-hot-toast";
-import SubmitBtn from "@/components/ButonSubmit";
+import SubmitBtn from "components/ButonSubmit";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contacto", 0.5);
@@ -31,12 +31,12 @@ export default function Contact() {
     >
       <SectionHeading>Contáctame</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        "Conéctate conmigo a través del formulario o por correo electrónico{" "}
+        Conéctate conmigo a través del formulario o por correo electrónico
         <a className="underline" href="mailto:hectorg.devp@gmail.com">
           hectorg.devp@gmail.com
-        </a>{" "}
+        </a>
         para explorar oportunidades de desarrollo y proyectos innovadores. Estoy
-        listo para colaborar y construir juntos."
+        listo para colaborar y construir juntos.
       </p>
       <form
         className="mt-10 flex flex-col dark:text-black"
