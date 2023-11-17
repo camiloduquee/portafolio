@@ -7,7 +7,7 @@ import Project from "./Project";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projectos", 0.75);
+  const { ref } = useSectionInView("Projectos", 0.5);
   return (
     <section ref={ref} id="projectos" className="scroll-mt-28 mb-28">
       <>

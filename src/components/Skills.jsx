@@ -22,7 +22,7 @@ const faceInAnimationVariants = {
 };
 
 export default function Skills() {
-  const { ref } = useSectionInView("Habilidades", 0.5);
+  const { ref } = useSectionInView("Habilidades", 0.75);
   return (
     <section
     id="habilidades"
@@ -34,7 +34,7 @@ export default function Skills() {
         {skillsData.map((skill, index) => {
           return (
             <motion.li
-              className="bg-white border border-black/[0.1] rounded-xl px-5 py-3"
+              className="bg-white border border-black/[0.1] rounded-xl px-5 py-3 dark:bg-gray-800 dark:text-white/100"
               key={index}
               variants={faceInAnimationVariants}
               initial="initial"

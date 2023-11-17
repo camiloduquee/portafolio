@@ -116,4 +116,6 @@ export const skillsData = [
   "Express",
   "PostgreSQL",
   "Framer Motion",
+  "Adobe Ilustrator",
+  "Adobe After Effects"
 ];

@@ -9,9 +9,13 @@ import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
 import { linkGitHub, linkLinkedin } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
+
 
 export const Intro = () => {
   const { ref } = useSectionInView("Inicio", 0.5);
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+  useActiveSectionContext();
   return (
     <section
       ref={ref}
@@ -54,14 +58,18 @@ export const Intro = () => {
         transition={{ delay: 0.1 }}
       >
         <Link
-          href="#contact"
+          href="#contacto"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+          onClick={()=> {
+            setActiveSection("Contacto");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contácteme{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <Link
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
           href="/Héctor-Gómez.pdf"
           target="_blank"
           rel="noopener noreferrer"
@@ -70,20 +78,20 @@ export const Intro = () => {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </Link>
         <Link
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
           href={linkLinkedin}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsLinkedin className="opacity-80 group-hover:opacity-100" />
+          <BsLinkedin className="opacity-80 group-hover:opacity-100 dark:text-white/60" />
         </Link>
         <Link
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
           href={linkGitHub}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsGithub className="opacity-80 group-hover:opacity-100" />
+          <BsGithub className="opacity-80 group-hover:opacity-100 dark:text-white/60" />
         </Link>
       </motion.div>
     </section>
