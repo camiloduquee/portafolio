@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState } from "react";
 
 export const ActiveSectionContext = createContext(null);
 
-export default function ActiveSectionContextProvider({ children }) {
+export function ActiveSectionContextProvider({ children }) {
   const [activeSection, setActiveSection] = useState("Inicio");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
