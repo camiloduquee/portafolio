@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "components/SectionHeading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
-import sendEmail from "@/lib/actions";
+import { useSectionInView } from "lib/hooks";
+import sendEmail from "lib/actions";
 import  toast  from "react-hot-toast";
-import SubmitBtn from "@/components/Buton-Submit";
+import SubmitBtn from "components/Buton-Submit";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contacto", 0.5);

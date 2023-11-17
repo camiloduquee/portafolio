@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "@/components/SectionHeading";
-import { projectsData } from "@/lib/data";
-import Project from "@/components/Project";
-import { useSectionInView } from "@/lib/hooks";
+import SectionHeading from "components/SectionHeading";
+import { projectsData } from "lib/data";
+import Project from "components/Project";
+import { useSectionInView } from "lib/hooks";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projectos", 0.5);

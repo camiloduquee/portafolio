@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect } from "react";
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "components/SectionHeading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
+import { useSectionInView } from "lib/hooks";
 
 export default function About() {
   const { ref } = useSectionInView("Sobre mí", 0.75);

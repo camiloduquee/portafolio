@@ -1,8 +1,8 @@
 "use server";
 
 import { Resend } from "resend";
-import { ValidateString } from "@/lib/utils";
-import ContactFormEmail from "@/email/ContactFormEmail";
+import { ValidateString } from "lib/utils";
+import ContactFormEmail from "email/ContactFormEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
