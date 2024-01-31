@@ -17,33 +17,34 @@ export default function About() {
       id="sobreMi"
     >
       <SectionHeading>Sobre mí</SectionHeading>
-      <p className="mb-3">
-        Mi experiencia como{" "}
-        <span className="font-medium">desarrollador web</span> me ha permitido
-        llevar a cabo proyectos web de principio a fin, desde la planificación y
-        el diseño hasta la implementación y el mantenimiento. Con sólidas
-        habilidades en
-        <span className=" font-medium"> Node.js, React, Next.js y Express</span>
-        , he trabajado en la creación de soluciones web innovadoras y escalables
-        que satisfacen las necesidades de los clientes y los usuarios. Además,
-        mi experiencia en el{" "}
-        <span className="italic">desarrollo web con WordPress y PHP</span> me ha
-        proporcionado una comprensión completa del{" "}
-        <span className="underline">ecosistema web.</span>
-      </p>
       <p>
-        Estoy constantemente actualizando mis conocimientos y habilidades para
-        mantenerme al día con las últimas tendencias y tecnologías en el
-        <span className="font-medium"> desarrollo web</span>. Mi objetivo es
-        ofrecer soluciones personalizadas y eficientes que impulsen el éxito de
-        los proyectos. Si estás buscando un
-        <span className="font-medium"> Full Stack Developer</span> comprometido
-        y apasionado para tu equipo o proyecto, estaré encantado de conectarme
-        contigo y explorar posibles colaboraciones.{" "}
-        <span className="italic">
-          ¡Hablemos de cómo puedo ayudarte a alcanzar tus objetivos en el
-          desarrollo web!
+        Soy un <span className="font-medium">Desarrollador Full Stack </span>{" "}
+        profesional con experiencia significativa en el{" "}
+        <span className="italic"> desarrollo de aplicaciones web.</span> Me
+        destaco por mi enfoque ágil, implementando metodologías ágiles para
+        garantizar la entrega eficiente de proyectos de alta calidad. Siempre
+        estoy en modo de "aprendizaje constante", explorando nuevas
+        oportunidades para ampliar mis conocimientos y mantenerme al tanto de
+        las últimas tendencias tecnológicas. Los retos son mi combustible, y me
+        encanta sumergirme en ellos con un fuerte compromiso con el trabajo en
+        equipo.
+      </p>
+      <br />
+      <p>
+        Mi objetivo es aplicar mis conocimientos y habilidades en proyectos para
+        diseñar y construir{" "}
+        <span className="font-medium">soluciones escalables</span>. Me esfuerzo
+        por superar expectativas, adoptando un enfoque proactivo para
+        identificar y resolver posibles problemas.
+      </p>
+      <br />
+      <p className=" text-lg">
+        🚀
+        <span className=" font-bold">
+          ¡Estoy listo para enfrentar nuevos desafíos y contribuir al éxito de
+          proyectos innovadores!
         </span>
+        🚀
       </p>
     </motion.section>
   );

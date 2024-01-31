@@ -5,17 +5,17 @@ import SectionHeading from "components/SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "lib/hooks";
 import sendEmail from "lib/actions";
-import  toast  from "react-hot-toast";
+import toast from "react-hot-toast";
 import SubmitBtn from "components/ButonSubmit";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contacto", 0.5);
- 
+
   return (
     <motion.section
       ref={ref}
       id="contacto"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-10 sm:mb-12 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -31,25 +31,24 @@ export default function Contact() {
     >
       <SectionHeading>Contáctame</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Conéctate conmigo a través del formulario o por correo electrónico
+        Conéctate conmigo a través del formulario o por correo electrónico{" "}
         <a className="underline" href="mailto:hectorg.devp@gmail.com">
           hectorg.devp@gmail.com
-        </a>
-        para explorar oportunidades de desarrollo y proyectos innovadores. Estoy
-        listo para colaborar y construir juntos.
+        </a>{" "}
+        para explorar oportunidades de desarrollo y proyectos innovadores. 
       </p>
+      
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           await sendEmail(formData);
           const { data, error } = await sendEmail(formData);
-          
-          if(data.error)
-          {
+
+          if (data.error) {
             toast.error(data.error.message);
             return;
           }
-          toast.success("Se envio el formulario")
+          toast.success("Se envio el formulario");
         }}
       >
         <input
@@ -69,6 +68,8 @@ export default function Contact() {
         ></textarea>
         <SubmitBtn />
       </form>
+      <p className="mt-16 text-lg font-bold">Estoy
+        listo para colaborar y construir juntos.🚀</p>
     </motion.section>
   );
 }
