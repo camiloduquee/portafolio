@@ -24,14 +24,13 @@ export default function Intro() {
         {/* elemento 1 */}
 
         <motion.h1
-          className="mb-10 mt-4 px-4 text-2xl font-medium sm:text-4xl col-span-2"
+          className="mb-5 mt-4 px-4 text-2xl font-medium sm:text-4xl col-span-2"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-l font-semibold py-16 text-gray-600">
+          <p className="text-l font-semibold mb-4 text-gray-600 dark:text-white">
             Hola, Soy Héctor 🖐️
-          </span>
-          <br />
+          </p>
           <span className="xs:text-8xl font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
             Full Stack Developer
           </span>
