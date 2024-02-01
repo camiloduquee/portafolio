@@ -28,7 +28,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-l font-semibold py-16">
+          <span className="text-l font-semibold py-16 text-gray-600">
             Hola, Soy Héctor 🖐️
           </span>
           <br />
@@ -49,27 +49,30 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <Link
-            href="#contacto"
-            className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
-            onClick={() => {
-              setActiveSection("Contacto");
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            Contácteme{" "}
-            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-          </Link>
-          <Link
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
-            href="/Hector-Gomez.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Descargar CV{" "}
-            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-          </Link>
-          <div className="flex flex-wrap gap-4 max-xs:col-span-2 max-xs:row-start-2">
+          <div className="flex gap-4 max-sm:flex-col items-center">
+            <Link
+              href="#contacto"
+              className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+              onClick={() => {
+                setActiveSection("Contacto");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              Contácteme{" "}
+              <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+            </Link>
+            <Link
+              className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
+              href="/Hector-Gomez.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+               Ver CV{" "}
+              <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+            </Link>
+          </div>
+
+          <div className="flex flex-rows justify-center mt-5 gap-4 max-xs:col-span-2 max-xs:row-start-2">
             <Link
               className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
               href={linkLinkedin}
@@ -98,8 +101,15 @@ export default function Intro() {
         </motion.div>
 
         {/* elemento 3 */}
+
         <div className="relative w-72 max-xs:w-52 max-xs:col-span-2 max-xs:row-start-2">
-          <div className="absolute z-20  row-start-2 w-72 h-72 max-xs:w-52 max-xs:h-52 rounded-full object-cover bg-gradient-to-r from-purple-300 via-purple-600 to-pink-500 p-1 animate-spin" />
+          <motion.div
+            className="absolute z-20  row-start-2 w-72 h-72 max-xs:w-52 max-xs:h-52 rounded-full object-cover bg-gradient-to-r from-purple-300 via-purple-600 to-pink-500 p-1 animate-spin"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", duration: 0.2 }}
+          />
+
           <motion.div
             className="z-20 absolute left-2 top-2 "
             initial={{ opacity: 0, scale: 0 }}
