@@ -23,7 +23,7 @@ export default function About() {
         <span className="italic"> desarrollo de aplicaciones web.</span> Me
         destaco por mi enfoque ágil, implementando metodologías ágiles para
         garantizar la entrega eficiente de proyectos de alta calidad. Siempre
-        estoy en modo de "aprendizaje constante", explorando nuevas
+        estoy en modo de {'"aprendizaje constante"'}, explorando nuevas
         oportunidades para ampliar mis conocimientos y mantenerme al tanto de
         las últimas tendencias tecnológicas. Los retos son mi combustible, y me
         encanta sumergirme en ellos con un fuerte compromiso con el trabajo en
