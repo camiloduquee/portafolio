@@ -18,9 +18,9 @@ export default async function sendEmail(formDate) {
   let data;
   try {
  data = await resend.emails.send({
-      from: "Formulario <onboarding@resend.dev>",
-      to: "hectorg.devp@gmail.com",
-      subject: "Desarrollo - Form",
+      from: 'Formulario <onboarding@resend.dev>',
+      to: ['hectorg.devp@gmail.com'],
+      subject: 'Desarrollo - Form',
       reply_to: email,
       text: message
       // react: <ContactFormEmail email={email} message={message} />,
