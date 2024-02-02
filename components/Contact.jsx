@@ -10,6 +10,17 @@ import SubmitBtn from "components/ButonSubmit";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contacto", 0.5);
+  
+  const send = async (formData) => {
+    await sendEmail(formData);
+    const { data, error } = await sendEmail(formData);
+
+    if (data.error) {
+      toast.error(data.error.message);
+      return;
+    }
+    toast.success("Se envio el formulario");
+  };
 
   return (
     <motion.section
@@ -38,19 +49,7 @@ export default function Contact() {
         para explorar oportunidades de desarrollo y proyectos innovadores.
       </p>
 
-      <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          await sendEmail(formData);
-          const { data, error } = await sendEmail(formData);
-
-          if (data.error) {
-            toast.error(data.error.message);
-            return;
-          }
-          toast.success("Se envio el formulario");
-        }}
-      >
+      <form className="mt-10 flex flex-col dark:text-black" action={send}>
         <input
           name="email"
           className="h-14 rounded-lg border border-black/10 px-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
