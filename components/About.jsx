@@ -30,14 +30,6 @@ export default function About() {
         equipo.
       </p>
       <br />
-      <p>
-        Mi objetivo es aplicar mis conocimientos y habilidades en proyectos para
-        diseñar y construir{" "}
-        <span className="font-medium">soluciones escalables</span>. Me esfuerzo
-        por superar expectativas, adoptando un enfoque proactivo para
-        identificar y resolver posibles problemas.
-      </p>
-      <br />
       <p className=" text-lg">
         🚀
         <span className=" font-bold">
