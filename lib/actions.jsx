@@ -4,9 +4,10 @@ import { Resend } from "resend";
 import { ValidateString } from "lib/utils";
 import ContactFormEmail from "email/ContactFormEmail";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function sendEmail(formDate) {
+
+export async function sendEmail(formDate) {
+  const resend = new Resend(process.env.RESEND_API_KEY); 
   const email = formDate.get("email");
   const message = formDate.get("message");
   if (!ValidateString(email)) {
@@ -32,3 +33,4 @@ export default async function sendEmail(formDate) {
   }
   return { data };
 }
+

@@ -4,7 +4,7 @@ import React from "react";
 import SectionHeading from "components/SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "lib/hooks";
-import sendEmail from "lib/actions";
+import { sendEmail } from "@/lib/actions";
 import toast from "react-hot-toast";
 import SubmitBtn from "components/ButonSubmit";
 
@@ -35,9 +35,9 @@ export default function Contact() {
         <a className="underline" href="mailto:hectorg.devp@gmail.com">
           hectorg.devp@gmail.com
         </a>{" "}
-        para explorar oportunidades de desarrollo y proyectos innovadores. 
+        para explorar oportunidades de desarrollo y proyectos innovadores.
       </p>
-      
+
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
@@ -68,8 +68,9 @@ export default function Contact() {
         ></textarea>
         <SubmitBtn />
       </form>
-      <p className="mt-16 text-lg font-bold">Estoy
-        listo para colaborar y construir juntos.🚀</p>
+      <p className="mt-16 text-lg font-bold">
+        Estoy listo para colaborar y construir juntos.🚀
+      </p>
     </motion.section>
   );
 }
